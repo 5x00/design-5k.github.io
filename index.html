@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Pony Robot</title>
+    <script type="module" crossorigin src="/assets/index-ErSG1HH9.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-fXJipjlh.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="container">
+      <h1>Pony AI Gen</h1>
+      <hr class="solid">
+      <form id="form">
+          <h2>Enter Prompt</h2>
+          <input type="text" id="prompt" class="textbox" placeholder="Eg. 3d curved object on a yellow background">  
+          <p id="error"></p>       
+          <br />
+          <h3>Lora strength (0.7-0.9 works best)</h3>
+          <div class="slider">          
+          <input id="range" type="range" min="0" max="100" value="80" oninput="rangeValue.innerText = this.value/100">
+          <p id="rangeValue">0.8</p>          
+          </div> 
+          <br />
+          <button class="submit-button" type="submit">Generate!</button>
+      </form>
+      <br />
+      <hr class="solid-dynamic" id="image-divider">     
+      <h3 id="generationStatus"></h3>
+      <div class="loader"><div id="loader-anim" class="lds-dual-ring"></div></div>
+      <div class="imgContainer" id="imgElem"></div>
+    </div>    
+  </body>
+</html>
