@@ -11,7 +11,7 @@ const currentFrame = (index) =>
 const preloadImages = () => {
   for (let i = 1; i < frameCount; i++) {
     const img = new Image();
-    img.src = currentFrame(i);
+    img.src = `./img/${i.toString().padStart(3, "0")}.jpg`;
   }
 };
 
