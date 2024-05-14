@@ -9,6 +9,7 @@ const currentFrame = (index) =>
   `./img/${index.toString().padStart(3, "0")}.jpg`;
 
 const preloadImages = () => {
+  console.log("preloading images");
   for (let i = 1; i < frameCount; i++) {
     const img = new Image();
     img.src = `./img/${i.toString().padStart(3, "0")}.jpg`;
