@@ -42,16 +42,3 @@ window.addEventListener("scroll", () => {
 });
 
 preloadImages();
-
-// SECOND APPLE-LIKE EFFECT:
-// Show element only if the has scrolled to the bottom of the page
-const bottomPageElement = document.querySelector(".bottom-page-element");
-window.onscroll = function (ev) {
-  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-    // you're at the bottom of the page
-    console.log("Bottom of page");
-    bottomPageElement.classList.add("show");
-  } else {
-    bottomPageElement.classList.remove("show");
-  }
-};
